@@ -1,0 +1,70 @@
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/preamble}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/contents}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/mathequ}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/environments}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/tables}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/figures}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/float}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/colors}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/fancypage}
+\setlength{\droptitle}{-2cm}
+\pretitle{\begin{center}\LARGE\sffamily}
+\title{ReadNotes}
+\posttitle{\par\end{center}\vspace{-0.3cm}}
+\preauthor{\large}
+\DeclareRobustCommand{\authorthing}
+{
+\begin{center}
+\begin{tabular}{c}%cc}
+覃宇林\\
+\end{tabular}
+\end{center}
+}
+\author{\authorthing}
+\postauthor{}
+\predate{\begin{center}\large\scshape}
+\date{2021年8月26日}
+\postdate{\par\end{center}}
+
+\begin{document}
+%pagestyle{plain}
+\frontpagestyle
+\maketitle
+\pagenumbering{Roman}
+\tableofcontents\newpage
+\pagenumbering{arabic}
+\mainpagestyle
+\setcounter{page}{1}
+
+\part{Classification of topological quantum matter with symmetries}
+\input{parts/Classification.tex}
+\clearpage
+
+\part{Quantum Field Theory}
+\setcounter{section}{0}
+\section{The Klein-Golden Field}
+\input{parts/QuantumField/Klein-Golden.tex}
+
+\section{The Dirac Field.}
+\input{parts/QuantumField/TheDiracField.tex}
+
+\section{The Vector Field}
+\input{parts/QuantumField/TheVectorField.tex}
+
+\section{Interacting fields and feymann diagrams}
+\input{parts/QuantumField/FeymannDiagram.tex}
+
+\section{Elementary process of quantum electrodynamics}
+\input{parts/QuantumField/QEDprocess.tex}
+
+\section{Radiative Correlation}
+\input{parts/QuantumField/RadiativeCorrelation.tex}
+
+\section{Radiative Correlation:Some formal Development}
+\input{parts/QuantumField/RadiativeCorrelationII.tex}
+
+\section{Functional Method}
+\input{parts/QuantumField/Functional.tex}
+
+\clearpage
+\end{document}

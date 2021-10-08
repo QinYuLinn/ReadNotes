@@ -1,0 +1,48 @@
+\subsection{classical point of view}
+for a real klein-Golden field the quantaty is listed below:
+lagrangian density:
+\[\mathcal{L}=\frac{1}{2}\dot{\phi}^2-\frac{1}{2}(\nabla\phi)^2-\frac{1}{2}m^2\phi^2=\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^2\phi^2\]
+motion equation
+\[(\partial^{\mu}\partial_{\mu}+m^2)\phi=0\]
+Hamitonian density:
+\[\mathcal{H}=\frac{1}{2}\pi^2+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2\]
+\[\pi=\frac{\partial \mathcal{L}}{\partial\dot{\phi}}\]
+using fourier transformation:
+\[\phi(\vec{x},t)=\int \frac{d^3\vec{p}}{(2\pi)^3} e^{i\vec{p}\bullet\vec{x}}\phi(\vec{p},t)\]
+the motion eqaution become:
+\[\frac{\partial^2}{\partial t^2}+(|p|^2+m^2)=0\]
+let $w_{\vec{p}}^2=|\vec{p}|^2+m^2$ one can get the motion eauation just like ocsillator:
+\[\frac{\partial^2}{\partial t^2}+w_p^2=0\]
+
+\subsection{quantilization of K-G Field}
+\[[\phi(x),\pi(y)]=i\delta^{(3)}(x-y)\]
+\[\phi(x)=\int \frac{d^3\vec{p}}{(2\pi)^3}\frac{1}{\sqrt{2\omega_p}}(a_p e^{ipx}+a_p^{\dagger}e^{-ipx})=\int \frac{d^3\vec{p}}{(2\pi)^3}\frac{1}{\sqrt{2\omega_p}}(a_p+a_{-p}^{\dagger})e^{ipx}\]
+\[\pi(x)=\int \frac{d^3\vec{p}}{(2\pi)^3}(-i)\sqrt{\frac{\omega_p}{2}}(a_p e^{ipx}-a_p^{\dagger}e^{-ipx})=\int \frac{d^3\vec{p}}{(2\pi)^3}(-i)\sqrt{\frac{\omega_p}{2}}(a_p-a_{-p}^{\dagger})e^{ipx}\]
+\[[a_p,a_{p'}^{\dagger}]=(2\pi)^3\delta^{(3)}(p-p')\]
+to integrate the hamitonian densenty, we get the hamitonnian:
+\[H=\int \mathcal{H}d^3x=\int \frac{d^3\vec{p}}{(2\pi)^3}w_p(a_p^{\dagger}a_p+\frac{1}{2}[a_p,a_p^{\dagger}])\]
+to make a similar calculation, we get the monnmentum of the field:
+\[P=-\int d^3x \pi(x)\nabla\phi(x)=\int\frac{d^3\vec{p}}{(2\pi)^3}pa_p^{\dagger}a_p\]
+the state is defined as:
+\[\diracr{p}=\sqrt{2E_p}a_p^{\dagger}\diracr{0}\]
+and the interpratation of $\phi(x)\diracr{0}$ is that create a partical at position x.
+and there are some realtions:
+\[[H,a_p]=-a_pE_p\]
+\[[H,a_p^{\dagger}]=a_p^{\dagger}E_p\]
+\[\phi(x,t)=e^{iHt}\phi(x)e^{-iHt}=\int \frac{d^3\vec{p}}{(2\pi)^3}\frac{1}{\sqrt{2\omega_p}}(a_p e^{-ipx}+a_p^{\dagger}e^{ipx})|_{p_0=E_p}\]
+\[\pi(x,t)=\frac{\partial}{\partial t}\phi(x,t)\]
+we shold notice that the inner producr in the above relation is lorentz four vector's inner product.
+\subsubsection{K-G Propagator}
+\[D(x-y)=\diracl{0}\phi(x)\phi(y)\diracr{0}=\int \frac{d^3\vec{p}}{(2\pi)^3}\frac{1}{2E_p}e^{-ip(x-y)}\]
+\[[\phi(x),\phi(y)]=D(x-y)-D(y-x)\]
+the retared Green's Function:
+\[D_R(x-y)=\theta(x_0-y_0)\diracl{0}[\phi(x),\phi(y)]\diracr{0}=\theta(x_0-y_0)\int \frac{d^3\vec{p}}{(2\pi)^3}\int \frac{dp_0}{2\pi i}\frac{-1}{p^2-m^2}e^{-ip(x-y)}\]
+there we introduce a fomilism for delta function:
+\[(\partial_t \delta(t))f(t)=-(\partial_t f(t))\delta(t)\]
+the motion eauqtion of the retarded green function is :
+\[(\partial^2+m^2)D_R(x-y)=-i\delta^{(4)}(x-y)\]
+the fourier tranfer of the green function is:
+\[D_R(p)=\frac{i}{p^2-m^2},D_R(x-y)=\int \frac{d^4p}{(2\pi)^4)}\frac{i}{p^2-m^2}e^{-ip(x-y)}\]
+the feymann progatator for a klein-golden partial:
+\[D_F(x-y)=\diracl{0}T\phi(x)\phi(y)\diracr{0}=\int \frac{d^4p}{(2\pi)^4)}\frac{i}{p^2-m^2+i\epsilon}e^{-ip(x-y)}\]
+
