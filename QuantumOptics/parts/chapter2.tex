@@ -1,0 +1,53 @@
+if the system has a curret and it can interact with the electro magnetic field which yield as:
+\[V(t)=\int J(r,t)\cdot A(r,t)d^3r\]
+then in the interaction picture:
+\[i\hbar\partial_t \diracr{\Psi}=V(t)\diracr{\Psi}\]
+which give the corresponding states:
+\[\diracr{\Psi(t)}=e^{-\frac{i}{\hbar}\int_0^t V(t')dt'}\diracr{\Psi(0)}=\prod_ke^{\alpha_ka_k^\dagger-\alpha_k^*a_k}\diracr{\Psi(0)}\]
+where the coefficent is:
+\[\alpha_k=\frac{1}{\hbar\nu_k}\xi_k\int_0^tdt'\int d^3r\hat{\epsilon}_k\cdot J(r,t)e^{i\nu_k t'-ikr}\]
+ so with a curret interact with the free field ,we can get the socalled coherent state:
+ \[\diracr{\alpha}=e^{\alpha a^\dagger-\alpha^*a}\diracr{0}\]
+ the property of the coherent state:
+ \[a\diracr{\alpha}=\alpha\diracr{\alpha}\]
+ \[\diracr{\alpha}=e^{-\frac{|\alpha|^2}{2}}\sum_{n=0}^\infty\frac{\alpha^n}{\sqrt{n!}}\diracr{n}\]
+ \[\diracr{\alpha}=D(\alpha)\diracr{0}=e^{-\frac{|\alpha|^2}{2}}e^{\alpha a^\dagger}e^{-\alpha^* a}\diracr{0}\]
+ some useful formula for opertor:
+ \[e^{A+B}=e^Ae^Be^{-\frac{1}{2}[A,B]}\]
+ the above relation holds for the condition that:$[A,[A,B]]=0$,$[B,[A,B]]=0$\par
+ \[e^{-\alpha A }Be^{\alpha A}=B-\alpha[A,B]+\frac{\alpha^2}{2!}[A,[A,B]]+\cdots\]
+ one can proof the above relation directly and proof the above above relation with the above relation using the method of solving the differtial eqaution.\par
+ some more properties for the coherent states:
+ \begin{itemize}
+ \item{the mean value of the number operator:\[\diracl{\alpha} a^\dagger a\diracr{\alpha}=|\alpha|^2\]}
+ \item{the coherent state is a minimum-uncertainty state so that\[\delta p\delta q=\frac{\hbar}{2}\]}
+ \item{the complete relation:\[\frac{1}{\pi}\int \diracr{\alpha}\diracl{\alpha}d^2\alpha=1\]}
+ \item{the inner product of two coherent state:\[\diracinner{\alpha}{\alpha'}=e^{-\frac{1}{2}|\alpha|^2-\frac{1}{2}|\alpha'|^2+\alpha'\alpha^*}\]}
+ \end{itemize}
+for a SHO system,if we add a linear potential to the hamitonian:
+\[H=\frac{p^2}{2m}+\frac{1}{2}kx^2-eE_0x=\frac{p^2}{2m}+\frac{1}{2}(k-\frac{eE_0}{k})^2-\frac{1}{2}(\frac{2E_0}{k})^2\]
+so applying a linear potential to a SHO just shifts its equilibrium point. which give us the coherent state.
+if we add a quadratic potential:
+\[H=\frac{p^2}{2m}+\frac{1}{2}kx^2-eE_0(ax-bx^2)=\frac{p^2}{2m}+\frac{1}{2}(k+2ebE_)x^2-eaE_0x\]
+so at this time beside the displacement of the zero energy also with the larger effective spring constant. which give us a squeed coherent state.\par
+\[X_1=\frac{1}{2}(a+a^\dagger)\]
+\[X_1=\frac{1}{2i}(a-a^\dagger)\]
+then the commution relations is$[X_1,X_2]=\frac{i}{2}$,the with Heisenbergy relation:
+\[\delta X_1\delta X_2\geq \frac{1}{4}\]
+if the state is also holds for the relation:
+\[(\delta X_i)^2\le \frac{1}{4}\] 
+then the state is called squeed state. if:
+\[\delta X_1\delta X_2=\frac{1}{4}\]
+then the state is called ideal squeezed state\par
+for the squeezed state we can write:
+\[\diracr{\Psi(t)}=e^{\frac{1}{2}\xi^*a^2-\frac{1}{2}\xi a^{\dagger 2}}\diracr{0}\]
+and the unitary squeezed operator is:
+\[S(\xi)=e^{\frac{1}{2}\xi^*a^2-\frac{1}{2}\xi a^{\dagger 2}}\]
+then the squeezed coherent state is:
+\[\diracr{\alpha,\xi}=S(\xi)D(\alpha)\diracr{0}\]
+one can check the relations:
+\[D^{-1}(\alpha)aD(\alpha)=a+\alpha\]
+\[D^{-1}(\alpha)a^\dagger D(\alpha)=a^\dagger+\alpha^*\]
+\[S^{-1}(\xi)aS(\xi)=a\cosh r-a^\dagger e^{i\theta}\sinh r\]
+\[S^{-1}(\xi)a^\dagger S(\xi)=a^\dagger \cosh r-ae^{-i\theta}\sinh r\]
+where $\xi=re^{i\theta}$

@@ -1,0 +1,84 @@
+\subsection{coherent state representation}
+in the quantum mechanics ,we have the average value of a observable operator:
+\[\mean{O}_{QM}=\diracl{\psi}O\diracr{\psi}\]
+since we don't know the state$\diracr{\psi}$,we often take the ensemble average:
+\[\mean{\mean{O}_{QM}}_{ensemble}=\sum_{\psi}P_{\psi}\diracl{\psi}O\diracr{\psi}\]
+with a difinition for the density operator which yield:
+\[\rho=\sum_{\psi}P_{\psi}\diracr{\psi}\diracl{\psi}\]
+we have the relation:
+\[\mean{O}=\mean{\mean{O}_{QM}}_{ensemble}=Tr(\rho O)\]
+using the complete relation for the coherent state,one can calculate the density operator as:
+\[\rho=\frac{1}{\pi^2}\int\int d^2\alpha d^2\beta \diracr{\alpha}\diracl{\alpha}\rho\diracr{\beta}\diracr{\beta}\]
+if we define a function:
+\[R(\alpha^*,\beta)=\diracl{\alpha}\rho\diracr{\beta}e^{\frac{1}{2}(|\alpha|^2+|\beta|^2)}\]
+then we can express the above relation as :
+\begin{equation}
+\rho=\int\int\frac{d^2\alpha}{\pi}\frac{d^2\beta}{\pi}\diracr{\alpha}\diracl{\beta}R(\alpha^*,\beta)e^{-\frac{1}{2}(|\alpha|^2+|\beta|^2)}
+\end{equation}
+this is called the coherent representation.\par
+
+\subsection{P representation}
+with a bit of calculation ,one can work out the followinng expression:
+\begin{align}
+\notag \delta(\alpha^*-a^\dagger)\delta(\alpha-a)&=\frac{1}{\pi^2}\int d^2\beta e^{-\beta(\alpha^*-a^\dagger)}e^{\beta^*(\alpha-a)}\\
+&=\frac{1}{\pi^2}\int d^2\beta e^{-i\beta(\alpha^*-a^\dagger)}e^{-i\beta^*(\alpha-a)}
+\end{align}
+with this in mind, a normal ordered quantity $O_N(a^\dagger,a)$ can be expressed as:
+\[\mean{O_N(a^\dagger,a)}=\int d^2\alpha P(\alpha,\alpha^*) O_N(\alpha,\alpha^*)\]
+where we have the function for $P(\alpha,\alpha^*)$:
+\begin{equation}
+P(\alpha,\alpha^*)=Tr(\rho\delta(\alpha^*-a^\dagger)\delta(\alpha-a))
+\end{equation}
+with a bit of the properties for the density operator,one can get the corresponding properties for the P function which yield:
+\[\int P(\alpha,\alpha^*)d^2\alpha=1\]
+and 
+\[\rho=\int d^2\alpha P(\alpha,\alpha^*)\diracr{\alpha}\diracl{\alpha}\]
+and with a bit of calculation for$\diracl{-\beta}\rho\diracr{\beta}$,one can get the explicity expression for P function:
+\begin{equation}
+P(\alpha,\alpha^*)=\frac{e^{|\alpha|^2}}{\pi^2}\int d^2\beta\diracl{-\beta}\rho\diracr{\beta}e^{|\beta|^2}e^{-\beta\alpha^*+\beta^*\alpha}
+\end{equation}
+\subsection{Q representation}
+when we considered a quantity which is revese normal ordered.we can define a function:
+\begin{equation}
+Q(\alpha,\alpha^*=Tr(\rho\delta(\alpha-a)\delta(\alpha^*-a^\dagger))=\frac{1}{\pi}\diracl{\alpha}\rho\diracr{\alpha}
+\end{equation}
+then one can get the expectation value for a reverse normal ordered operator which yield as:
+\[O_{A}(a,a^{\dagger})=\int d^2\alpha Q(\alpha,\alpha^*)O_A{\alpha,\alpha^*}\]
+the relationship between Q and P representation is:
+\[Q(\alpha,\alpha^*)=\frac{1}{\pi}\int d^2\alpha' P(\alpha',\alpha'^{*})e^{-|\alpha-\alpha'|^2}\]
+whih is a convelution with the function$e^{-x^2}$
+\subsection{Wigner-Weyl representation}
+if we write down the delta function explicity,one can get the explicite form for the P and Q's representation which is:
+\[P(\alpha,\alpha^*)=\frac{1}{\pi^2}\int d^2\beta e^{-i\beta \alpha^*-i\beta^*\alpha}Tr(e^{i\beta a^\dagger}e^{i\beta^* a}\rho)\]
+\[Q(\alpha,\alpha^*)=\frac{1}{\pi^2}\int d^2\beta e^{-i\beta \alpha^*-i\beta^*\alpha}Tr( e^{i\beta^* a}e^{i\beta a^\dagger}\rho)\]
+with this in mind, we can define the wigner-weyl representation:
+\[W(\alpha,\alpha^*)=\frac{1}{\pi^2}\int d^2\beta e^{-i\beta \alpha^*-i\beta^*\alpha}Tr(e^{i\beta^* a+i\beta a^\dagger}\rho)\]
+This distribution function W is associated with symmetric order-ing.for example:
+\[\frac{1}{2}\mean{aa^\dagger+a^\dagger a}=\int d^2\alpha W(\alpha,\alpha^*)\alpha\alpha^*\]
+if we set$\alpha=\frac{1}{\sqrt{2}}(x+ip)$ then:
+\[W(\alpha,\alpha^*)\rightarrow W(x,p)\]
+and we have the relation:
+\[\rho(x)=\int W(x,p)d^3p\]
+\[\rho(p)=\int W(x,p)d^3x\]
+\subsection{the generalized representation}
+for the generilized representation for the density operator,we have:
+\[\rho=\pi\int d^2\alpha F^{\Omega}(\alpha,\alpha^*)\triangle^{\Omega}(\alpha-a,\alpha^*-a^\dagger)\]
+where we have the expression for the latter one in the integration:
+\[\triangle^{\Omega}(\alpha-a,\alpha^*-a^\dagger)=\frac{1}{\pi^2}\int d^2\beta e^{\Omega(\alpha,\alpha^*)}e^{-\beta(\alpha^*-a\dagger)+\beta^*(\alpha-a)}\]
+if we define the other function:
+\[\bar{\triangle}^{\Omega}(\alpha-a,\alpha^*-a^\dagger)=\frac{1}{\pi^2}\int d^2\beta e^{-\Omega(\alpha,\alpha^*)}e^{\beta(\alpha^*-a\dagger)-\beta^*(\alpha-a)}\]
+we have a formulism for the two triangle function:
+\[Tr(\triangle^{\Omega}(\alpha-a,\alpha^*-a^\dagger)\bar{\triangle}^{\Omega}(\alpha'-a,\alpha'^*-a^\dagger))=\frac{1}{\pi}\delta^2(\alpha-\alpha')\]
+with this in mind we can express the F function explicitily:
+\[F^{\Omega}(\alpha,\alpha^*)=Tr(\rho\bar{\triangle}^{\Omega}(\alpha'-a,\alpha'^*-a^\dagger))\]
+when choose differennt form for the $\Omega(\alpha,\alpha^*)$，we  have different representation which yield:
+\begin{itemize}
+\item{$\Omega(\alpha,\alpha^*)=-\frac{|\alpha|^2}{2}$,then we have P representation:$F^{\Omega}(\alpha,\alpha^*)=P(\alpha,\alpha^*)$}
+\item{$\Omega(\alpha,\alpha^*)=\frac{|\alpha|^2}{2}$,then we have Q representation:$F^{\Omega}(\alpha,\alpha^*)=Q(\alpha,\alpha^*)$}
+\item{$\Omega(\alpha,\alpha^*)=0$,then we have Wigner-Weyl representation:$F^{\Omega}(\alpha,\alpha^*)=W(\alpha,\alpha^*)$}
+\end{itemize}
+using the convolution theorem,one can work out the explicity formula for the wigner-weyl representation:
+\[W(\alpha,\alpha^*)=\frac{2}{\pi^2}e^{2|\alpha|^2}\int d^2\beta\diracl{-\beta}\rho\diracr{\beta}e^{-2(\beta\alpha^*-\beta^*\alpha)}\]
+there is a connection between the P representation and wigner-weyl representation which yield as:
+\[W(\alpha,\alpha^*)=\frac{2}{\pi}\int d^2\beta P(\beta,\beta^*)e^{-2|\alpha-\beta|^2}\]
+
