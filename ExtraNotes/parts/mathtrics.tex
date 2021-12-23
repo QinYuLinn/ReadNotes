@@ -1,0 +1,52 @@
+\subsection{N维球面的表面积与体积}
+\begin{equation}
+V_n=\int_{\sum x_i\leq R^2} \prod dx_1\cdots dx_n
+\end{equation}
+先从数学的角度严格计算这个积分，可以做n维的球坐标变换
+\begin{align*}
+&x_1=r\sin\theta_1\sin\theta_2\cdots \sin\theta_{n-2}\sin\theta_{n-1}\\
+&x_2=r\sin\theta_1\sin\theta_2\cdots \sin\theta_{n-2}\cos\theta_{n-1}\\
+&x_3=r\sin\theta_1\sin\theta_2\cdots \cos\theta_{n-2}\\
+&\cdots\\
+&x_{n-1}=r\sin\theta_1\cos\theta_2\\
+&x_{n}=r\cos\theta_1
+\end{align*}
+利用归纳发计算上述变换的雅可比行列式为:
+\[\prod dx_1\cdots dx_n=r^{n-1}\sin^{n-2}\theta_1\sin^{n-3}\theta_2\cdots \sin\theta_{n-2} drd\theta_1 d\theta_2\cdots d\theta_{n-1}\]
+利用基本的积分:
+\begin{align*}
+&\int_{0}^{\frac{\pi}{2}} \sin^n\theta d\theta=\frac{(n-1)!!}{n!!}\frac{\pi}{2}, n-even\\
+&\int_{0}^{\frac{\pi}{2}} \sin^n\theta d\theta=\frac{(n-1)!!}{n!!}, n-odd\\
+\end{align*}
+从而可以得到积分结果为:
+\begin{align*}
+&V_n=R^n\frac{1}{n!!}2^{n-2}(\frac{\pi}{2})^{\frac{n-2}{2}} 2\pi , n-even\\
+&V_n=R^n\frac{1}{n!!}2^{n-2}(\frac{\pi}{2})^{\frac{n-3}{2}} 2\pi , n-odd\\
+\end{align*}
+利用gamma函数可将上面的式子统一写为:
+\[V_n=\frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2}+1)}R^n\]
+由于:
+\[dV_n=S_{n}dr\]
+从而可以得到
+\[S_{n}=\int_{\theta_j}r^{n-1}\sin^{n-2}\theta_1\sin^{n-3}\theta_2\cdots \sin\theta_{n-2} d\theta_1 d\theta_2\cdots d\theta_{n-1}=\frac{2\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2})}r^{n-1}\]
+对于物理学家来说，没有必要做这么详细的严格的推导，一般地，我们有:
+\[V_n(R)=C_nR^n\]
+从而有
+\[S_n(R)=nC_nR^{n-1}\]
+另一方面:
+\[\pi^{\frac{n}{2}}=(\int_{-\infty}^{\infty}e^{-x^2}dx)^n=\int\int\cdots\int e^{-(x_1^2+\cdots x_n^2)}dV_n\]
+从而有:
+\[\pi^{\frac{n}{2}}=\int_0^\infty e^{-r^2}nC_n r^{n-2}=C_n\Gamma(\frac{n}{2}+1)\]
+进而确定这个常数为:
+\[C_n=\frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2}+1)}\]
+这种类型的积分也可以利用归纳法求解，例如我们考虑如下的积分:
+\[S(n,R)=\int_{\sum_{1}^n |r_i|<R}d^3r_1\cdots d^3r_n\]
+计算S(n+1,R),我们可以得到:
+\begin{align*}
+S(n+1,R)&=\int_{\sum_{1}^{n+1} |r_i|<R}d^3r_1\cdots d^3r_nd^3r_{n+1}\\
+&=\int_0^Rd^3r_{n+1} \int_{\sum_{1}^n |r_i|<R-|r_{n+1}|}d^3r_1\cdots d^3r_n
+\end{align*}
+n=1时结果为:
+\[S(1,R)=\int_{|r_1|<R}d^3r=\int_0^R 4\pi r^2=\frac{4\pi}{3}R^3\]
+在计算S(2,R)找规律，最后归纳假设得到结果:
+\[S(n,R)=\frac{(8\pi)^N}{(3N)!}R^{3N}\]

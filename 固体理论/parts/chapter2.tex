@@ -117,4 +117,30 @@ D_{\alpha\beta}\left(\begin{array}{c}k\\s,s'\\\end{array}\right)=\frac{1}{\sqrt{
 \[g(w)=\frac{\Omega}{(2\pi)^3)}\sum_\sigma\int_{S_\omega}\frac{dS_{\Omega\sigma}}{|\nabla_k\omega_\sigma(k)|}\]
 当波包群速度$\nabla_k\omega_\sigma(k)$为零时，系统的态密度出现奇点，这个奇点称为范霍夫奇点。\par
 \subsection{范霍夫奇点}
+按照一般理论，根据奇异行为处的函数变化特点，可以得到四类范霍夫奇点，这四类范霍夫奇点及其在奇点附近的态密度变化特点入图\ref{fig:fanhuofu}所示。\par
+\begin{figure}
+\begin{center}
+\includegraphics[height=8cm]{figures/fanhuofu.png}
+\caption{四类范霍夫奇点及其相应态密度行为特点}
+\label{fig:fanhuofu}
+\end{center}
+\end{figure}
+\subsection{晶格振动的局域模}
+考虑以为原子链，原子链中在原点处有一个杂质，其质量为$M'$，定义:
+\[\epsilon=\frac{M-M'}{M}\]
+$\epsilon$就刻画了杂质的情况，小于零时代表重杂质，大于零时代表轻杂质。这时系统的动能和势能项分别为：
+\[T=\frac{1}{2}M\sum_{l}\dot{u}_l^2+\frac{1}{2}(M'-M)\dot{u}_0^2\]
+\[V=\frac{1}{2}f\sum_l(u_l-u_{l+1})^2\]
+利用布洛赫波函数将原子的振动位移展开：
+\[u_l=\frac{1}{\sqrt{N}}\sum_k\xi_ke^{-ikla}\]
+假设$\xi_k\sim e^{-i\omega t}$,那么可以得到关于震动频率的方程:
+\[1=\frac{\epsilon \omega^2}{N}\sum_k\frac{1}{\omega^2-\omega_M^2}=F(\omega)\]
+因此画出函数$F(\omega)$，那么便可以通过作图得到原子振动的频率，最后的结果如图\ref{fig:juyumo}所示。由图可知，重杂质情形在声频带许可的范围内，非完整晶格的震动频率向低频移动，并且与完整晶格的简正模解有一个一一对应关系。对于轻杂质情形，非完整晶格的震动频率向高频移动，非完整晶格的解比完整晶格解少一个，这个成为局域振动模式，在$\omega>\omega_M$的频带内。\par
+\begin{figure}
+\begin{center}
+\includegraphics[height=8cm]{figures/juyumo.png}
+\caption{重杂质与轻杂质情形得到的系统的振动频率与无缺陷时的比较图}
+\label{fig:juyumo}
+\end{center}
+\end{figure}
 

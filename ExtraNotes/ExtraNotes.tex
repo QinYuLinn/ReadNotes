@@ -9,7 +9,7 @@
 \input{/Users/qinyulin/LaTex/Modules/ArticleClass/fancypage}
 \setlength{\droptitle}{-2cm}
 \pretitle{\begin{center}\LARGE\sffamily}
-\title{ReadNotes-LieGroups}
+\title{ReadNotes-QuantumOptics}
 \posttitle{\par\end{center}\vspace{-0.3cm}}
 \preauthor{\large}
 \DeclareRobustCommand{\authorthing}
@@ -23,7 +23,7 @@
 \author{\authorthing}
 \postauthor{}
 \predate{\begin{center}\large\scshape}
-\date{2021年9月30日}
+\date{2021年10月07日}
 \postdate{\par\end{center}}
 
 \begin{document}
@@ -36,13 +36,7 @@
 \mainpagestyle
 \setcounter{page}{1}
 
-\section{Lie Groups and Lie algebra}
-\input{parts/chapter1.tex}
-
-\section{Appendix --Some Gapps}
-\begin{lemma}
-If $x\rightarrow \nu_\epsilon(x)$ is a C1 vector field on a C2 manifold M, depending in a C1 fashion on a real parameter $\epsilon$, and if $\Phi^t_\epsilon$ denotes its flow after time t, then $\epsilon\rightarrow \Phi^t_\epsilon(x)$ is differentiable, and satisfies:
-\[\frac{\partial}{\partial \epsilon}\Phi^t_\epsilon(x)=\int_0^1T_{\Phi^s_\epsilon(x)}(Phi^{t-s}_\epsilon(x))\frac{\partial \nu_\epsilon}{\partial \epsilon}(\Phi^s_\epsilon(x))ds\in T_{\Phi^t_\epsilon(x)} M\]
-\end{lemma}
+\section{Some Mathmatics Trics}
+\input{parts/mathtrics.tex}
 
 \end{document}

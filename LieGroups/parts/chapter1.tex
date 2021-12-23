@@ -72,10 +72,15 @@ special linear group:
 流形上的左右不变向量场记为:
 \[X^L,X^R\]
 \begin{lemma}
-Let $\Phi^t$ be a  the flow of a left or' right invariant vector field v on G.this is a $C^2$ mapping G$\rightarrow$ G satisfying:
-\[\Phi^t=R(\Phi^t(1)),if-v-is-left-invariant\]
-\[\Phi^t=L(\Phi^t(1)),if-v-is-right-invariant\]
+Let $\Phi^t$ be a  the flow of a left or' right invariant vector field v on G.this is a $C^2$ mapping G$\rightarrow$ G satisfying:\par
+\begin{center}
+\begin{tabular}{cc}
+$\Phi^t=R(\Phi^t(1))$&if v is left invariant\\
+$\Phi^t=L(\Phi^t(1))$&if v is right invariant\\
+\end{tabular}
+\end{center}
 \end{lemma}
+
 \begin{theorem}
 For Every $X\in g$ there is a unique homomorphism $h=h_X$:(R,+)$\rightarrow (G,\cdot)$ that is differentiable at t = 0 and satisfies $\frac{dh}{dt}(0)=X$ It is equal to the solution curve of both $X^L$ and of $X^R$ starting at the identity element of G. The flows of $X^L$ and of $X^R$ are globally defined for all $t \in R$
 \end{theorem}
@@ -85,6 +90,14 @@ one can easily get that:
 \[h_X(st)=h_{tX}(s)\]
 then set s=1 one can get:
 \[h_X(t)=exp(tX)\]
+
+differential the above function with respect to t one can get:
+\begin{center}
+\begin{tabular}{cc}
+$X=T_0(exp)(X)$&for any X$\in$ g\\
+\end{tabular}
+\end{center}
+so $T_0(exp)$ is equal to the identity,and  the $C^1$ diffeomorphism from U onto V opposite to exp is called log.\par
 \subsection{The exponetial map of vector space}
 we can define :
 \[e^A=\sum_k\frac{1}{k!}A^k\]
@@ -107,6 +120,22 @@ Let G, and H, be Lie groups, with Lie algebra equal to g, and h, respectively. S
 For any $X\in g$  the linear mapping $T_Xexp:g\rightarrow T_{exp(X)}G$ is given by:
 \[T_Xexp=T_1R(exp(X))\circ \int_0^1e^{sadX}ds=T_1L(exp(X))\circ\int_0^1e^{-s adX}ds\]
 \end{theorem}
+which is illustrated in figure\ref{fig:TxExp1} and figure\ref{fig:TxExp2}\par
+\begin{figure}
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=\textwidth,height=6cm]{figures/TxExp1.jpg}
+\caption{}
+\label{fig:TxExp1}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=\textwidth,height=6cm]{figures/TxExp2.jpg}
+\caption{}
+\label{fig:TxExp2}
+\end{minipage}
+\end{figure}
+
 we can define a function of A as:
 \[f(A):=\int_0^1e^{sA}ds=A^{-1}(e^A-I)\]
 if A is invertible,then we have the corresponding definnition and if A is not invertible we define:

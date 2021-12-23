@@ -1,0 +1,59 @@
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/preamble}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/contents}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/mathequ}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/environments}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/tables}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/figures}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/float}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/colors}
+\input{/Users/qinyulin/LaTex/Modules/ArticleClass/fancypage}
+\setlength{\droptitle}{-2cm}
+\pretitle{\begin{center}\LARGE\sffamily}
+\title{PapersNotes}
+\posttitle{\par\end{center}\vspace{-0.3cm}}
+\preauthor{\large}
+\DeclareRobustCommand{\authorthing}
+{
+\begin{center}
+\begin{tabular}{c}%cc}
+覃宇林\\
+\end{tabular}
+\end{center}
+}
+\author{\authorthing}
+\postauthor{}
+\predate{\begin{center}\large\scshape}
+\date{2021年8月26日}
+\postdate{\par\end{center}}
+
+\begin{document}
+%pagestyle{plain}
+\frontpagestyle
+\maketitle
+\pagenumbering{Roman}
+\tableofcontents\newpage
+\pagenumbering{arabic}
+\mainpagestyle
+\setcounter{page}{1}
+
+\part{Classification of topological quantum matter with symmetries by Chiu, Ching-Kai and Teo, Jeffrey CY and Schnyder, Andreas P and Ryu, Shinsei}
+\input{parts/Chiu2016p35005p35005.tex}
+\clearpage
+
+\part{Theory of topological superconductivity based on Yu-Shiba-Rusinov states--by Jian Li}
+\input{parts/Jian2020pp.tex}
+\clearpage
+
+\part{Majorana spin in magnetic atomic chain systems--Li, Jian and Jeon, Sangjun and Xie, Yonglong and Yazdani, Ali and Bernevig, B Andrei}
+\input{parts/Li2018p125119p125119.tex}
+\clearpage
+
+\part{Coherent long-range magnetic bound states in a superconductor--M{\'e}nard, Gerbold C and Guissart, S{\'e}bastien and Brun, Christophe and Pons, St{\'e}phane and Stolyarov, Vasily S and Debontridder, Fran{\c{c}}ois and Leclerc, Matthieu V and Janod, Etienne and Cario, Laurent and Roditchev, Dimitri and others}
+\input{parts/Menard2015p1013p1016.tex}
+\clearpage
+
+\part{Yu-Shiba-Rusinov states in 2D superconductors with arbitrary Fermi contours--by Ortuzar, Jon and Trivini, Stefano and Rouco, Mikel and Zaldivar, Javier and Pascual, Jose Ignacio and Bergeret, F Sebastian}
+\input{parts/Ortuzar2021pp.tex}
+\clearpage
+
+\end{document}

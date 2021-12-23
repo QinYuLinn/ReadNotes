@@ -1,0 +1,80 @@
+很多时候对于Normal Operator N有很多疑惑。比如：
+\[N(aa^\dagger-a^\dagger a)=a^\dagger a-a^\dagger a=0\]
+但是，从另外一个角度出发：
+\[N(aa^\dagger-a^\dagger a)=N([a,a^\dagger])=N(1)=1\]
+这就导出了矛盾，这说明N的定义还不是很完备，以下详细讨论一下Normal Operator N\par
+\subsection{Normal Operator的作用空间}
+简单来讲，Normal Operator是作用在自由幺半群代数空间上的算符。比如，当我们考虑玻色体系，描述这个体系的产生湮灭算符集为：
+\[\{a_p,a_p^\dagger\}_p\]
+利用这个算符集可以自由生成一个幺半群G，其中这个幺半群G中的元素为：
+\[\prod_p x_p\]
+其中$x_p=a_p$或者$x_p=a_p^\dagger$。这个半群的乘法为两个元素的连写:
+\[\prod_p x_p\circ \prod_{p'} x_{p'}=\prod_p x_p\prod_{p'} x_{p'}\]
+空集为此幺半群的单位元，记为e。利用这个幺半群G构造G上的C-代数空间C[G],其中C[G]上的元素为:
+\[f=\sum_{g\in G} c_g g\]
+其中元素的相等定义为:
+\[\sum_g c_g g=\sum_g d_g g \Leftrightarrow c_g=d_g,\forall g\]
+其中加法定义为：
+\[\sum_g c_g g+\sum_g d_g g=\sum_g (c_g+d_g) g\]
+数乘定义为：
+\[c_1\sum_g c_g g=\sum_g c_1c_g g\]
+乘法定义为：
+\[\sum_g c_g g\sum_{g'} c_{g'} g'=\sum_g\sum_{g'}c_gc_{g'}gg'\]
+Normal Opertor N的作用空间就是上述定义的群代数空间。
+\subsection{Normal Operator N的定义}
+定义在上述群代数空间上的满足以下几个性质的算符称为Normal Operator，记为N:
+\begin{itemize}
+\item{N是作用在群代数空间上的线性算符}:
+\[N(f+g)=N(f)+N(g),\forall f,g\in C[G]\]
+\item{N在元素e上的作用不变}
+\[N(e)=e\]
+因此对于任意一个$c\in C$
+\[N(c\circ e)=c\circ e\]
+\item{产生算符在左边时，可以直接拿出来}
+\[N(a_p^\dagger f)=a_p^\dagger N(g) ,\forall f \in C[G]\]
+\item{湮灭算符在右边时也可以拿出来}
+\[N(fa_p)=N(f)a_p,\forall f \in C[G]\]
+\item{N算符的作用是把产生算符符号放到左侧\par}
+\[N(fa_p^\dagger g)=a_p^\dagger N(fg),\forall f,g\in C[G]\]
+\end{itemize}
+\subsection{具体描述}
+由于N的作用空间是一个自由半群的C代数空间，因此对于任意一个物理希尔伯特空间上的算符，在进行N操作时，必须将其映射到C[G]上，然后再利用相同的映射将其转化为物理上的算符。也就是说，放在N()里的东西已经自然的是C[G]上的元素。为了区别这两个空间中的元素，我们假设有一个真实的物理系统，描述该系统的产生湮灭算符集为：
+\[\{a_p,a_p^\dagger\}\]
+这些物理上的算符成立等式：
+\[a_pa_{p'}^\dagger-a_{p'}^\dagger a_p=(2\pi)^3\delta^{(3)}(p-p')\]
+任何物理上的算符都是这个物理算符集上构造出来的群代数空间C[G]上的元素，但是元素之间有由上述对易关系给出的某些关系，比如上面的对易关系就是群代数空间C[G]上的两个元素，但是这两个元素相等(物理上)，因此这个空间实际上并不是一个一个自洽的群代数空间，因为：
+\[\sum_g c_g g=\sum_g d_g g \Leftrightarrow c_g=d_g,\forall g\]
+为此，在进行N操作之前，我们需要构造出一个自洽的自由群代数空间。我们通过一个一一映射$F_{set}$(指标set表示这是算符集与符号集之间的映射)将此物理算符集映射到某个符号集，如：
+\[F_{set}(a_p)=\boxtimes_p,F_{set}(a_p^\dagger)=\bigcirc_p\]
+这里利用符号$\boxtimes_p,\bigcirc_p$是为了说明映射过去用于构造自洽群代数空间的元素集与之前的物理算符之间没有任何关系。那么这时候得到一个符号集合
+\[\Lambda=\{\boxtimes_p,\bigcirc_p\}\]
+利用此符号集构造一个自洽的自由幺半群代数空间$C[G_2]$，这个空间是自洽的群代数空间是因为：
+\[\boxtimes_p\bigcirc_{p'}-\bigcirc_{p'}\boxtimes_p\neq (2\pi)^3\delta^{(3)}(p-p')\circ e\]
+那么在空间$C[G_2]$上可以定义N算符。物理上常用的$N_{phy}$算符(为区分，我们将其标记为$N_{phy}$)实际上是以下三个映射的复合:
+\[N_{phy}=F^{-1}\circ N \circ F\]
+其中F为前述的$F_{set}$的自然延拓，使得F成为由物理算符集构造的非自洽的自由群代数C[G]到C[$G_2$]的一个同构。
+\subsection{一些例子}
+比如考虑物理上的单模光场，描述该系统的物理算符集为
+\[\{a,a^\dagger\}\]
+考虑算符
+\[h(a,a^\dagger)=aa^\dagger-a^\dagger a\]
+那么我们有
+\[N_{phy}(h(a,a^\dagger))=F^{-1}\circ N \circ F (h(a,a^\dagger))\]
+首先有
+\[F (h(a,a^\dagger))=\boxtimes\bigcirc-\bigcirc\boxtimes\]
+然后我们有：
+\[N\circ F (h(a,a^\dagger))=N(\boxtimes\bigcirc-\bigcirc\boxtimes)=\bigcirc\boxtimes-\bigcirc\boxtimes=0\circ e\]
+从而我们有：
+\[N_{phy}(h(a,a^\dagger))=F^{-1} (0\circ e)=0\bullet 1=0\]
+同理
+\[N_{phy}(1)=F^{-1} \circ N (e)=F^{-1}(e)=1\]
+但是
+\[N_{phy}(1)\neq N_{phy}(aa^\dagger-a^\dagger a)\]
+这是因为
+\[F(1)=e\neq \boxtimes\bigcirc-\bigcirc\boxtimes=F(aa^\dagger-a^\dagger a)\]
+\subsection{结论}
+物理上常常采用相同的一套符号，即：
+\[F_{set}(a_p)=a_p\]
+\[F_{set}(a_p^\dagger)=a_p^\dagger\]
+\[N_{phy}=N\]
+因此常常引起各种不自洽的等式，例如本文开始部分引入的矛盾。只要搞清楚了本文给出的这些概念那么这些矛盾立刻被消除了。简单来讲，放在N算符里的东西只是一个符号，不能进行任何运算。类似地，可以考虑费米子系统。由于核心思想是一致的，因此就略去了。\par

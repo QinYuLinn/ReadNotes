@@ -1,0 +1,30 @@
+Since the Largaran of the eletromagnetic field is:
+\[\mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}\]
+so we can easily compute the quantity(which is myself defined):
+\[\pi^{\mu\nu}=\frac{\partial L}{\partial (\partial_{\nu} A_\mu)}=F^{\mu\nu}\]
+which implies the conjugate monmentum to $A_0$ is:
+\[\pi^0=\frac{\partial L}{\partial (\partial_{0} A_0}=F^{00}=0\]
+so the standard quantilization is not working here\par
+to make a trick, we can use a new largrange:
+\[\mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-\frac{\xi}{2}(\partial^\mu A_\mu)^2\]
+which is the same as before in lorentz gauge:$\partial^\mu A_\mu=0$.\par
+in such a form, the quantity as before defined is become:
+\[\pi^{\mu\nu}=\frac{\partial L}{\partial (\partial_{\nu} A_\mu)}=F^{\mu\nu}-\xi\eta^{\mu\nu}(\partial^\sigma A_\sigma)\]
+so at this time we have conjugate monmentum about the zero component:
+\[\pi^0=\frac{\partial L}{\partial (\partial_{0} A_0})=-\xi\partial^\sigma A_\sigma=-\xi \partial\bullet A\]
+from this formula ,it is clearly to see that if we want to quantelize the eletromagnetic field from the standard procedure ,the lorentz gauge is not working.\par
+and the motion equation is :
+\[\partial^2 A_\mu-(1-\xi)\partial_\mu(\partial\bullet A)=0\]
+so when we choose $\xi=1$ which called the Feymann Gauge,the motion equation is just the same as the classic wavefunction:\par
+\[A_\mu(x)=\int\frac{d^3 p}{(2\pi)^3}\frac{1}{\sqrt{2E_p}}\sum_{\lambda=0}^3(a_p^{(\lambda)}\epsilon_\mu^{(\lambda)}(p)e^{-ipx}+a_p^{(\lambda)\dagger}\epsilon_\mu^{(\lambda)*}(p)e^{ipx})\]
+where symbol $\lambda$ denote the polarization of the photon.\par
+\subsection{convention for the polarization vector}
+first we have p fixed,and we randomly choose a unit vector n which satisfy $n^0>0$.at this time we have two vectors fixed.we choose vector $\epsilon^{(1),(2)}$ that in the plane which is vertical to the n and p and satisfying:
+\[\epsilon^{\lambda}(p)\bullet \epsilon^{\lambda'*}(p)=-\delta_{\lambda,\lambda'} , with \lambda,\lambda'=1,2\]
+we choose $\epsilon^3(p)$ in the plane which n and p located and make it vertical to n and is unit:
+\[\epsilon^3(p)\bullet n=0, (\epsilon^3(p))^2=-1\]
+to sommerize we have the relations in our convention:
+\[\sum_{\lambda}\frac{\epsilon_\mu^\lambda(p)\epsilon_\nu^{\lambda *}(p)}{\epsilon^\lambda(p)\bullet\epsilon^{\lambda*}(p)}=\eta^{\mu\nu}\]
+\[\epsilon^\lambda(p)\bullet\epsilon^{\lambda'*}(p)=\eta^{\lambda\lambda'}\]
+and the quantilization relation is:
+\[[A^\mu(x),\dot{A}^{\nu}]=-i\eta^{\mu\nu}\delta^3(x-y)\]
