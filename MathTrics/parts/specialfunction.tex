@@ -1,0 +1,54 @@
+\subsection{贝塞尔函数}
+\begin{enumerate}
+\item{$\nu$阶贝塞尔微分算子\par}
+\[B_\nu=\frac{1}{x}\frac{d}{dx}x\frac{d}{dx}+(1-\frac{\nu^2}{x^2})\]
+其线性无关的两组解为(n不是整数):
+\[J_\nu,J_{-\nu}\]
+其线性无关的两组解为(n是整数):
+\[J_\nu,N_{\nu}\]
+其中我们有:
+\[N_{\nu}(x)=\frac{\cos \nu \pi J_\nu(x)-J_{-\nu}(x)}{\sin\nu\pi}\]
+贝塞尔函数的渐近形式为:
+\[J_\nu(x)\sim \sqrt{\frac{2}{\pi x}}\cos(x-\frac{\nu\pi}{2}-\frac{\pi}{4})\]
+\[N_\nu(x)\sim \sqrt{\frac{2}{\pi x}}\sin(x-\frac{\nu\pi}{2}-\frac{\pi}{4})\]
+既包含汇聚波又包含发散波，因此定义hankel函数将汇聚与发散波分离:
+\[H_\nu^{(1)}(x)=J_\nu(x)+iN_\nu(x)\]
+\[H_\nu^{(2)}(x)=J_\nu(x)-iN_\nu(x)\]
+分别代表发散播与汇聚波\par\vspace{10pt}
+\item{$\nu$阶虚宗量贝塞尔微分算子}
+\[B^i_\nu=\frac{1}{x}\frac{d}{dx}x\frac{d}{dx}+(-1-\frac{\nu^2}{x^2})\]
+在此方程中令$t=ix$,那么微分算子就变为$\nu$阶贝塞尔微分算子。
+虚宗量贝塞尔微分算子的解为贝塞尔函数:
+\begin{align*}
+I_\nu(x)&=e^{-\frac{i\nu\pi}{2}}J_\nu(xi)\\
+K_\nu(x)&=\frac{\pi}{2\sin\nu\pi}(I_{-\nu}(x)-I_\nu(x))
+\end{align*}
+在$x\rightarrow \infty$时的渐进行为为：
+\begin{align*}
+I_\nu(x)&\sim \sqrt{\frac{1}{2\pi x}}e^x\\
+K_\nu(x)&\sim \sqrt{\frac{\pi}{2 x}}e^{-x}
+\end{align*}
+\item{$\nu$阶球贝塞尔微分算子}
+\[B^s_\nu=\frac{1}{x^2}\frac{d}{dx}x^2\frac{d}{dx}+(1-\frac{\nu(\nu+1)}{x^2})\]
+可以对待求解的函数做变换:
+\[y(x)=\frac{v(x)}{\sqrt{x}}\]
+那么关于v(x)的方程就是$\nu+\frac{1}{2}$阶贝塞尔微分算子满足的方程:
+\[B_{\nu+\frac{1}{2}}(x)v(x)=0\]
+因此$\nu$阶球贝塞尔微分算子的解为球贝塞尔函数:
+\[j_\nu(x)=\sqrt{\frac{\pi}{2x}}J_{\nu+\frac{1}{2}}(x)\]
+\[n_\nu(x)=\sqrt{\frac{\pi}{2x}}N_{\nu+\frac{1}{2}}(x)\]
+同样可以因此定义球hankel函数将汇聚与发散波分离:
+\[h_\nu^{(1)}(x)=j_\nu(x)+in_\nu(x)\]
+\[h_\nu^{(2)}(x)=j_\nu(x)-in_\nu(x)\]
+\end{enumerate}
+
+\subsection{球函数}
+\begin{enumerate}
+\item{连带勒让德微分算子$L_l^m$\par}
+\[L_l^m=\frac{d}{dx}[(1-x^2)\frac{d}{dx}]+(l(l+1)-\frac{m^2}{1-x^2})\]
+该微分算子可以看作是微分算子:
+\[L_l^m=\frac{1}{\sin\theta}\frac{d}{d\theta}\sin\theta\frac{d}{d\theta}+[l(l+1)-\frac{m^2}{\sin^2\theta}]\]
+做变量替换$x=\cos\theta$而得到的.
+该方程的解为连带勒让德函数:
+\[P_l^m(x):=P_l^m(\cos\theta)\]
+\end{enumerate}

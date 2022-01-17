@@ -1,0 +1,29 @@
+\section{一般理论}
+YSR 态指的是由磁性杂质原子在 (常规) 超导体中诱导的超导能隙内的束缚态\par
+常规超导体与磁性原子晶格所组成的平均场模型:
+\[\hat{H}=\hat{H}_{sc}+\hat{H}_M+\hat{H}_{T}\]
+其中常规超导体部分为:
+\[\hat{H}_{sc}=\int d\bold{k}[\sum_{\alpha,\alpha',s,s'} \xi_{\alpha,s;\alpha',s'}(\bold{k})c_{\alpha,s}^\dagger c_{\alpha',s'}(\bold{k})+(\sum_\alpha \Delta c_{\alpha,\uparrow}^\dagger(\bold{k})c_{\bar{\alpha},\downarrow}
+^\dagger(-\bold{k})+h.c)]\]
+磁性原子部分的哈密顿量为:
+\begin{align*}
+\hat{H}_M&=\sum_{\vec{r}_M,\vec{r}'_M}\sum_{\beta,s,\beta',s'}h_{\beta,s,\beta',s'}(\vec{r}_M,\vec{r}'_M)d_{\beta,s}(\vec{r}_M)^\dagger d_{\beta',s'}(\vec{r}'_M)\\
+&=\int_{BZ}d\bold{k}_M\sum_{\beta,\beta',s,s'}h_{\beta,s,\beta',s'}(\bold{k}_M)d_{\beta,s}(\bold{k}_M)^\dagger d_{\beta',s'}(\bold{k}_M)
+\end{align*}
+两者之间相互作用部分的哈密顿量为:
+\[\hat{H}_T=\sum_{\vec{r}_M}\sum_{\alpha,s;\alpha',s'}\int d\vec{r} v_{\alpha,s;\alpha',s'}(\vec{r}-\vec{r}_M)c_{\alpha,s}^\dagger d_{\alpha',s'}(\vec{r_M})+h.c\]
+对于超导体部分，选取动量空间的Nambu基矢量:
+\[(c_{\uparrow}^\dagger(\bold{k}),c_{\downarrow}^\dagger(\bold{k}),c_{\downarrow}(\bold{-k}),-c_{\uparrow}(\bold{-k}))\]
+系统的哈密顿量可以写为:
+\begin{align}
+\hat{H}_{sc}=\left(\begin{array}{cc}
+\bold{\xi}(\bold{k})&\Delta\\
+\Delta&-\bold{\xi}(\bold{k})\\
+\end{array}
+\right)
+\end{align}
+
+ 假设磁性原子和超导体间的隧穿是完全局域的, 并且不依赖于位置或自旋:
+ \[v_{\alpha,s;\alpha',s'}(\vec{r}-\vec{r}_M)=v_{\alpha,\alpha'}\delta_{s,s'}\delta(\vec{r}-\vec{r}_M)\]
+
+

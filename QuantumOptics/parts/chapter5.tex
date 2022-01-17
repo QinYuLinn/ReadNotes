@@ -1,0 +1,32 @@
+cavity与外界电磁场的相互作用的哈密顿量为:
+\[H=-E\cdot d=-E\cdot \alpha_s E\sim -\alpha_s E^-\cdot E^+\]
+其中我们有总的电磁场为自由电磁场与cavity的电磁场的和:
+\[E=E_c+E_{out}\]
+其中cavity的部分为:
+\[E_c=\epsilon_ce^{-i\omega t}a+h.c\]
+最后我们可以假设外界电磁场我们关心的模式$\epsilon_e$是处在相干态$\diracr{\alpha}$的,因此可以得到最后的总的哈密顿量:
+\[H=g\alpha e^{-i\Delta t}a^\dagger +h.c +\sum_k g_ke^{-i\Delta_k t}a_ka^\dagger+h.c\]
+其中我们有:
+\[g_k=\alpha_s \epsilon^*_c(r_0)\epsilon_k(r_0)\]
+以及:
+\[\Delta_k=\omega_k-\omega\]
+首先我们用模式$\epsilon_e$的光共振激发($\Delta_e=0$)cavity,那么哈密顿量中其他模式的光可以忽略，这时cavity的态被激发到相干态:
+\[\diracr{\Psi}_c=\diracr{g\alpha t}\]
+然后我们将这一模式$\epsilon_e$的光去掉，这时系统的哈密顿量为:
+\[H=\sum_k g_ke^{-i\Delta_k t}a_ka^\dagger+h.c\]
+而且cavity与环境一起的态可以用:
+\[\diracr{\Psi}_EM=\diracr{\Psi_c\Psi_R}\]
+我们研究在哈密顿量为\[H=\sum_k g_ke^{-i\Delta_k t}a_ka^\dagger+h.c\]的情况下系统处在不同初态的演化。假设系统初态处在:
+\[\diracr{\Psi(t=0)}=\diracr{n,v}\]
+也就是说cavity的模式处在$\diracr{n}$态，而环境部分处在真空态
+那么假设t时刻的态为cavoty只向外辐射一个光子:
+\[\diracr{\Psi(t)}=c_n\diracr{n,v}+\sum_kc_k\diracr{n-1,1_k}\]
+那么系统的运动方程为:
+\begin{align}
+i\dot{c}_n&=\sqrt{n}\sum_kg_ke^{-i\Delta_k t}c_k\\
+i\dot{c}_k&=\sqrt{n}g^*_ke^{i\Delta_k t}c_n
+\end{align}
+经过同样的wigner-weiskopt过程以及马尔科夫近似，我们可以引进一个有效哈密顿量:
+\[H_{eff}=-\frac{i\hbar}{2}C^\dagger C\]
+其中:
+\[C=\sqrt{\kappa}a;a=\sqrt{n}\diracr{n-1}\diracl{n}\]

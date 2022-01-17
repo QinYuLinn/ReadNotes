@@ -1,0 +1,85 @@
+首先由于此时没有外加光场，因此真空中电磁场的所有模式都需要考虑,即有：
+\[E=\sum_k\epsilon_ke^{-i\omega_kt}a_k+h.c\]
+我们考虑原子态处于二能级系统，也就是说:
+\[d=d_{eg}e^{i\omega_{eg}}\diracr{e}\diracl{g}+h.c\]
+系统的初态为电磁场的基态与原子的激发态的张量积:
+\[\diracr{\Psi(t=0)}=\diracr{v}\diracr{e}\]
+系统的激发态为:
+\[\diracr{\Psi(t)}=c_e\diracr{v}\diracr{e}+\sum_kc_k\diracr{1_k}\diracr{g}\]
+在旋转波近似下系统的相互作用表象下的哈密顿量为(其中$a_k$为算符):
+\[H_I=-E\cdot d=-\sum_k\hbar(g_ke^{i\Delta_k t}a_k\diracr{e}\diracl{g}+h.c)\]
+其中
+\[g_k=\frac{\epsilon_k d_{eg}}{\hbar};\Delta_k=\omega_{eg}-\omega_k\]
+如果定义$g_k=-\frac{\epsilon_k d_{eg}}{\hbar}$,那么相互作用的哈密顿量可以写为:
+\[H_I=-E\cdot d=\sum_k\hbar(g_ke^{i\Delta_k t}a_k\diracr{e}\diracl{g}+h.c)\]
+这是常用的形式。\par
+那么这是系统的薛定谔方程导出系数之间的方程:
+\begin{align}
+i\dot{c}_e&=\sum_kg_ke^{i\Delta_kt}c_k\label{eq:ce}\\
+i\dot{c}_k&=g^*_ke^{-i\Delta_kt}c_e\label{eq:ck}
+\end{align}
+由于$c_e\sim 1$,因此我们近似有:
+\[c_k=-ig^*_k\int_0^Te^{-i\Delta_kt}dt=g^*_k\frac{e^{-i\Delta_kT}-1}{\Delta_k} \]
+从而有:
+\[|c_k|^2=|g_k|^2\frac{T\sin^2\frac{\Delta_kT}{2}}{\frac{(\Delta_kT}{2})^2}T\sim |g_k|^22\pi\delta(\Delta_k)T \]
+and we have:
+\[|c_e|^2=1-\sum_k|c_k|^2\]
+对上面的式子关于T做微分，那么有:
+\[-\frac{d}{dT}|c_e|^2=2\pi\sum_k|g_k|^2\delta(\Delta_k)\]
+利用积分代替求和，那么我们可以得到:
+\[-\frac{d}{dT}|c_e|^2=\frac{V}{(2\pi)^3} \int_0^\infty 2\pi \frac{\hbar\omega_k}{2\epsilon_0 V}\frac{d_{eg}^2}{\hbar^2} 4\pi k^2 dk \delta(\omega_{eg}-\omega_k)\]
+利用色散关系式:
+\[\omega_k=ck\]
+最后积分求出来可以得到:
+\[-\frac{d}{dT}|c_e|^2=\Gamma_{eg};\Gamma_{eg}=\frac{\omega_{eg}^3d_{eg}^2}{2\pi\epsilon_0c^3\hbar}\]
+\subsubsection{Wigner Weisskopt Theory}
+我们可以从方程\ref{eq:ck}解出$c_k$然后再代入方程\ref{eq:ce}得到关于$c_e$的微分积分方程:
+\[\dot{c}_e(t)=-\int_0^tK(t-\tau)c_e(\tau)d\tau\]
+做马尔科夫近似:
+\[\dot{c}_e(t)=(-\int_0^tK(t-\tau)d\tau)c_e(t)\]
+其中
+\[K(t)=\sum_k|g_k|^2e^{i\Delta_kt}\]
+因此我们可以计算得到:
+\[\int_0^tK(t-\tau)d\tau\sim \int_{-\infty}^tK(t-\tau)d\tau=\int d\Delta_k\frac{w_k^3d_{eg}^2}{4\pi^2\epsilon_0\hbar c^3}\int_{-\infty}^te^{i\Delta_k(t-\tau)}d\tau\]
+最后计算得到：
+\[\int_0^tK(t-\tau)d\tau\sim \frac{\Gamma_{eg}}{2}+i\delta_L\]
+一般可以选取归一化条件使得$\delta_L\sim 0$
+由此可以得到
+\[c_e=e^{-\frac{\Gamma_{eg}}{2}t}\]
+将此带入方程\ref{eq:ck} 即可以解出$c_k$:
+\[c_k=\frac{1-e^{-(i\Delta_k+\frac{\Gamma}{2})t}}{-\Delta_k+i\frac{\Gamma}{2}}g^*_k\]
+\subsubsection{随机波函数方法}
+注意到方程\ref{eq:ck}与\ref{eq:ce}在马尔科夫近似下变为如下的两个方程:
+\begin{align}
+i\dot{c}_e&=-i\frac{\Gamma}{2}c_e\\
+i\dot{c}_k&=g^*_ke^{-i\Delta_kt}c_e
+\end{align}
+而上面的方程与由如下的有效哈密顿量来描述的系统的运动方程相同:
+\[H_{eff}=\hbar(-i\frac{\Gamma}{2})\diracr{e,v}\diracl{e,v}+\hbar\sum_kg^*_ke^{-i\Delta_kt}a^\dagger_k\diracr{g,v}\diracl{e,v}\]
+因此我们可以直接用哈密顿量:
+\[H=H_0+H_{eff}\]
+来描述这个系统，也就是说哈密顿量中出现了虚部，不再是厄米的。由于光子的探测过程是一个有损耗的过程，探测到光子那么光子就被探测器吸收，那么系统的态为没有光子的态，如果没有探测到光子，那么说明没有光子产生，同样系统也是处在没有光子的态，因此电磁场总是处在真空态，因此可以引进随机波函数的方法研究系统，也就是说:
+\[H=H_0+\hbar(-i\frac{\Gamma}{2})\diracr{e,v}\diracl{e,v}\]
+引进一个jump算符:
+\[C=\sqrt{\Gamma}\diracr{g}\diracl{e}\]
+从而系统的哈密顿量可以写为:
+\[H=H_0-\hbar\frac{i}{2}C^\dagger C\]
+系统发生Jump之后的态就相当于用C作用在原始态上，没有发生Jump就用$H_{eff}$演化。由于是非厄米的，每演化一次都需要对波函数做归一化。
+
+\subsubsection{主方程}
+小系统与开放系统一起的哈密顿量为:
+\[H_{eff}=H-\sum_j\frac{i\hbar}{2}C^{\dagger}_jC_j\]
+系统的密度矩阵的演化方程为:
+\[\dot{\rho}=\frac{1}{i\hbar}(H_{eff}\rho-\rho H_{eff})+\sum_jC_j\rho C^{\dagger}_j\]
+将$H_{eff}$的形式带入上述的方程，我们可以得到此方程的另一种表述形式:
+\[\dot{\rho}=\frac{1}{i\hbar}[H,\rho]-\sum_j(\frac{1}{2}\{C^{\dagger}_jC_j,\rho\}-C_j\rho C^{\dagger}_j)\]
+可以验证关于密度矩阵的一个基本关系:
+\[tr(\dot{\rho})=0\]
+主方程在原子的本征态下的矩阵元演化方程即为Optical Bloch Equation:
+\begin{align}
+\notag\dot{\rho}_{ee}&=\cdots\\
+\notag\dot{\rho}_{ge}&=\cdots\\
+\notag\dot{\rho}_{gg}&=\cdots
+\end{align}
+如果取展开基矢为哈密顿量的本征态(称为缀饰态),同样可以得到另一套描述方程.
+

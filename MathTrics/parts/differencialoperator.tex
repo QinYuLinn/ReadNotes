@@ -1,0 +1,23 @@
+\subsection{柱坐标系}
+\begin{enumerate}
+\item{梯度算子$\vec{\nabla}$\par}
+\[\vec{\nabla}=\frac{\partial}{\partial r}e_r+\frac{1}{r}\frac{\partial}{\partial \theta}e_\theta+\frac{\partial}{\partial z}e_z\]
+\item{散度算子$\vec{\nabla}\cdot$\par}
+\[\vec{\nabla}\cdot \vec{A}=\frac{1}{r}\frac{\partial}{\partial r}rA_r+\frac{1}{r}\frac{\partial}{\partial \theta}A_\theta+\frac{\partial}{\partial z}A_z\]
+\item{旋度算子$\vec{\nabla}\times$\par}
+\[\vec{\nabla}\times \vec{A}=\frac{1}{r}(\frac{\partial A_z}{\partial \theta}-\frac{\partial (rA_\theta)}{\partial z})e_r+(\frac{\partial A_r}{\partial z}-\frac{\partial A_z}{\partial r})e_\theta+\frac{1}{r}(\frac{\partial (rA_\theta)}{\partial r}-\frac{\partial A_r}{\partial \theta})e_z\]
+\item{laplace算符$\nabla^2$}
+\[\nabla^2=\frac{1}{r}\frac{\partial}{\partial r}r\frac{\partial}{\partial r}+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}+\frac{\partial^2}{\partial z^2}\]
+\end{enumerate}
+
+\subsection{球坐标}
+\begin{enumerate}
+\item{梯度算子$\vec{\nabla}$\par}
+\[\vec{\nabla}=\frac{\partial}{\partial r}e_r+\frac{1}{r}\frac{\partial}{\partial \theta}e_\theta+\frac{1}{r\sin\theta}\frac{\partial}{\partial \phi}e_\phi\]
+\item{散度算子$\vec{\nabla}\cdot$\par}
+\[\vec{\nabla}\cdot \vec{A}=\frac{1}{r^2}\frac{\partial}{\partial r}r^2A_r+\frac{1}{r\sin\theta}\frac{\partial}{\partial \theta}(\sin\theta A_\theta)+\frac{1}{r\sin\theta}\frac{\partial}{\partial \phi}A_\phi\]
+\item{旋度算子$\vec{\nabla}\times$\par}
+\[\vec{\nabla}\times \vec{A}=\frac{1}{r\sin\theta}(\frac{\partial \sin\theta A_\phi}{\partial \theta}-\frac{\partial (A_\theta)}{\partial \phi})e_r+\frac{1}{r}(\frac{1}{\sin\theta}\frac{\partial A_r}{\partial \phi}-\frac{\partial (rA_\phi)}{\partial r})e_\theta+\frac{1}{r}(\frac{\partial (rA_\theta)}{\partial r}-\frac{\partial A_r}{\partial \theta})e_\phi\]
+\item{laplace算符$\nabla^2$}
+\[\nabla^2=\frac{1}{r^2}\frac{\partial}{\partial r}r^2\frac{\partial}{\partial r}+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta}(\sin\theta\frac{\partial}{\partial \theta})+\frac{1}{r^2\sin\theta^2}\frac{\partial^2}{\partial \phi^2}\]
+\end{enumerate}
